@@ -1,2 +1,0 @@
-# colorToolReact
-Created with CodeSandbox
