@@ -8,7 +8,6 @@ import { v4 } from 'uuid';
 import './styles.css';
 
 window.React = React;
-
 const logResult = (title, color) =>
   console.log(`New data was entered: ${title.value} ${color.value}`);
 
