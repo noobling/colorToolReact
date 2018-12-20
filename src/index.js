@@ -4,8 +4,11 @@ import AddColorFrom from './AddColorForm';
 import StarRating from './StarRating';
 import ColorList from './ColorList';
 import { v4 } from 'uuid';
+import storeFactory from './storeFactory';
 
 import './styles.css';
+
+const store = storeFactory();
 
 window.React = React;
 const logResult = (title, color) =>
@@ -68,4 +71,7 @@ class App extends React.Component {
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+const render = () => ReactDOM.render(<App store={store} />, rootElement);
+
+store.subscribe(render);
+render();
